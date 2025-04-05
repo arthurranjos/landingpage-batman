@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    background-color: black;
+    height: 90px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav{
+    width: 60%;
+}
+
+ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+li{
+    list-style: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 19px;
+    transition: .5s;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+li:hover{
+    color: #d21617;
+}
+
+#logo{
+    width: 150px;
+    height: auto;
+}
+
+#banner{
+    background-image: url('https://preview.redd.it/6092ltrt8nt71.jpg?auto=webp&s=c26d698d5d92796be9c6ab47f22dba63a7be96c3');
+    background-position: 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+}
+
+#trailer-container{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trailer{
+    width: 50%;
+}
+
+#sinopse{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 30px;
+}
+
+.description{
+    color: #fff;
+    font-size: 14px;
+    font-family: "Kdam Thmor Pro", serif;
+    width: 70%;
+}
+
+.button{
+    width: 200px;
+    height: 60px;
+    background-color: #d21617;
+    color: #fff;
+    padding:  8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .8s;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    margin-top: 25px;    
+}
+
+.button:hover {
+    background-color: #fff;
+    color: black;
+}
+
+.actor-cards-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cards-content{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 40px;
+}
+
+
+.card{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: 50% 50%;
+    cursor: pointer;
+    transition: 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 20px 10px;
+    color: #fff;
+    font-size: 17px;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+
+.card:hover{
+    transform: scale(1.02);
+}
+
+.banner-1{
+    background-image: url('https://preview.redd.it/zktgeb70i2h91.jpg?auto=webp&s=d3e90d99501486e2cc936f32698c869e1be09bed');
+}
+
+.banner-2{
+    background-image: url('https://i.pinimg.com/originals/3c/a6/28/3ca6282ac5440b49f0008981ad151512.png');
+}
+
+.banner-3{
+    background-image: url('https://preview.redd.it/opinions-on-jeffrey-wrights-gordon-v0-l617izc155sb1.png?auto=webp&s=d86970095d58cf4443cf974ced11c68dd31e93bf');
+}
+.banner-4{
+    background-image: url('https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2024/09/20/colin-farrell_4-us2yamypxq2f.jpg');
+}
+.banner-5{
+    background-image: url('https://static.wikia.nocookie.net/marvel_dc/images/5/56/Carmine_Falcone_The_Batman_Movie_001.jpg/revision/latest?cb=20220218125454');
+}
+.banner-6{
+    background-image: url('https://static.wikia.nocookie.net/the-batman-universe/images/2/24/Alfred_Pennyworth.png/revision/latest?cb=20241015165224');
+}
+.banner-7{
+    background-image: url('https://i.redd.it/owa9l8exbmr91.jpg');
+}
+.banner-8{
+    background-image: url('https://seliganerd.com/wp-content/uploads/2024118113123_1.jpg');
+}
+.banner-9{
+    background-image: url('https://static.wikia.nocookie.net/the-batman-universe/images/a/a5/Gil_Colson_greets_Bruce_Wayne_-_The_Batman.png/revision/latest?cb=20211228043229');
+}
+.banner-10{
+    background-image: url('https://i.pinimg.com/736x/ff/94/64/ff94642f529085bba1732252eda19f07.jpg');
+}
+
+footer{
+    height: 300px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+span{
+    color: #fff;
+    font-family: "Kdam Thmor Pro", serif;
+}
+
+.footer-navagation{
+    display: none;
+}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media(max-width: 768px){
+    .footer-navagation{
+        display: block;
+    }
+
+    nav{
+        display: none;
+    }
+
+    #banner{
+        background-position: 40%;
+    }
+
+    #trailer-container{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .content{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .trailer{
+        width: 100%;
+    }
+
+    #sinopse{
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .description{
+        width: 100%;
+    }
+
+    .button{
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .cards-content{
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+    }
+    
+    
+}
