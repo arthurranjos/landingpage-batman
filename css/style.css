@@ -1,257 +1,426 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    list-style: none;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-
-header{
-    background-color: black;
-    height: 90px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+/*Início styles index*/
+header {
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-
-nav{
-    width: 60%;
+nav {
+  width: 60%;
 }
-
-ul{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
-
-li{
-    list-style: none;
-    color: aliceblue;
-    cursor: pointer;
-    font-size: 19px;
-    transition: .5s;
-    font-family: "Kdam Thmor Pro", serif;
+li {
+  list-style: none;
+  color: aliceblue;
+  transition: .5s;
+  cursor: pointer;
+  font-size: 19px;
+  font-family: 'Kdam thmor pro' , sans-serif;
 }
-
-li:hover{
-    color: #d21617;
+li:hover {
+  color: #d21617;
 }
-
-#logo{
-    width: 150px;
-    height: auto;
+#logo {
+  width: 150px;
+  height: auto;
 }
-
-#banner{
-    background-image: url('https://preview.redd.it/6092ltrt8nt71.jpg?auto=webp&s=c26d698d5d92796be9c6ab47f22dba63a7be96c3');
-    background-position: 50% 50%;
-    background-size: cover;
-    width: 100%;
-    height: 500px;
+#banner {
+  background-image: url('https://pbs.twimg.com/media/FBwJWeQXIAItfyH.jpg:large');
+  background-position: 50% 50%;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
 }
-
-#trailer-container{
+#trailler-container {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trailler {
+  width: 50%;
+}
+#sinopse {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-left: 30px;
+}
+.description {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'kdam thmor pro' , sans-serif;
+  width: 70%;
+}
+.button {
+  width: 150px;
+  height: 40px;
+  background-color: #d21617;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .8s;
+  font-size: 15px;
+  font-family: 'kdam thmor pro' , sans-serif;
+  margin-top: 25px;
+  border: none;
+  font-weight: bold;
+  outline: none;
+}
+.button:hover {
+  background-color: #fff;
+  color: #000;
+}
+.actor-cards-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+.cards-content {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 20px;
+  column-gap: 40px;
+}
+.card {
+  width: 100%;
+  height: 600px;
+  background-position: 50% 50%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 1s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 0 20px 10px;
+  color: #fff;
+  font-size: 17px;
+  font-family: 'kdam thmor pro' , sans-serif;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.banner-1 {
+  background-image: url('https://preview.redd.it/zktgeb70i2h91.jpg?auto=webp&s=d3e90d99501486e2cc936f32698c869e1be09bed');
+}
+.banner-2 {
+  background-image: url('https://pbs.twimg.com/media/FMO83fmWYAMYttY?format=jpg&name=900x900');
+}
+.banner-3 {
+  background-image: url('https://i.redd.it/r96po045tlu81.png');
+}
+footer {
+  height: 300px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+span {
+  color: #fff;
+  font-family: 'kdam thmor pro' , sans-serif;
+}
+.footer-navigation {
+  display: none;
+}
+.footer-list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+/*Fim styles index*/
+/* Início responsividade index*/
+@media (max-width: 768px) {
+  .footer-navigation {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+  #banner {
+    background-position: 40%;
+  }
+  #trailler-container {
     width: 100%;
     height: 400px;
     display: flex;
-    justify-content: center;
-}
-
-.content{
-    width: 60%;
+    flex-direction: column;
+  }
+  .content {
+    width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.trailer{
-    width: 50%;
-}
-
-#sinopse{
-    width: 50%;
+    flex-direction: column;
+  }
+  .trailler {
+    width: 100%;
+  }
+  #sinopse {
+    width: 95%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 30px;
-}
-
-.description{
-    color: #fff;
-    font-size: 14px;
-    font-family: "Kdam Thmor Pro", serif;
-    width: 70%;
-}
-
-.button{
-    width: 200px;
-    height: 60px;
-    background-color: #d21617;
-    color: #fff;
-    padding:  8px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: .8s;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    border: none;
-    outline: none;
-    margin-top: 25px;    
-}
-
-.button:hover {
-    background-color: #fff;
-    color: black;
-}
-
-.actor-cards-container{
+  }
+  .description {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
+  }
+  .button {
+    width: 50%;
+    margin-top: 30px;
+  }
+  .cards-content {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+  }
 }
+/* Fim responsividade index */
+/* Início styles comentários */
 
-.cards-content{
-    width: 90%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 20px;
-    column-gap: 40px;
+#coments-container {
+  width: 100%;
+  height: 570px;
+  display: flex;
+  justify-content: left;
 }
-
-
-.card{
-    width: 100%;
-    height: 500px;
-    background-size: cover;
-    background-position: 50% 50%;
-    cursor: pointer;
-    transition: 1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    padding: 0 0 20px 10px;
-    color: #fff;
-    font-size: 17px;
-    font-family: "Kdam Thmor Pro", serif;
+.foto {
+  width: 55%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
-
-.card:hover{
-    transform: scale(1.02);
+#batman-foto {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
-
-.banner-1{
-    background-image: url('https://preview.redd.it/zktgeb70i2h91.jpg?auto=webp&s=d3e90d99501486e2cc936f32698c869e1be09bed');
+#formulario {
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 25px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: 'kdam thmor pro' , sans-serif;
+  color: #fff;
 }
-
-.banner-2{
-    background-image: url('https://i.pinimg.com/originals/3c/a6/28/3ca6282ac5440b49f0008981ad151512.png');
+.titulo {
+  font-size: 25px;
 }
-
-.banner-3{
-    background-image: url('https://preview.redd.it/opinions-on-jeffrey-wrights-gordon-v0-l617izc155sb1.png?auto=webp&s=d86970095d58cf4443cf974ced11c68dd31e93bf');
+.campo1 {
+  display: block;
+  background-color: rgb(165, 165, 165);
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  height: 20px;
+  width: 400px;
+  border-radius: 5px;
 }
-.banner-4{
-    background-image: url('https://p2.trrsf.com/image/fget/cf/1200/1200/middle/images.terra.com/2024/09/20/colin-farrell_4-us2yamypxq2f.jpg');
+.campo2 {
+  display: block;
+  background-color: rgb(165, 165, 165);
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  height: 20px;
+  width: 400px;
+  border-radius: 5px;
 }
-.banner-5{
-    background-image: url('https://static.wikia.nocookie.net/marvel_dc/images/5/56/Carmine_Falcone_The_Batman_Movie_001.jpg/revision/latest?cb=20220218125454');
+.campo3 {
+  display: block;
+  background-color: rgb(165, 165, 165);
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  height: 20px;
+  width: 200px;
+  border-radius: 5px;
 }
-.banner-6{
-    background-image: url('https://static.wikia.nocookie.net/the-batman-universe/images/2/24/Alfred_Pennyworth.png/revision/latest?cb=20241015165224');
+.campo4 {
+  display: block;
+  background-color: rgb(165, 165, 165);
+  color: #000;
+  font-weight: bold;
+  font-size: 10px;
+  height: 15px;
+  cursor: pointer;
 }
-.banner-7{
-    background-image: url('https://i.redd.it/owa9l8exbmr91.jpg');
+.campo5 {
+  display: block;
+  background-color: rgb(165, 165, 165);
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  height: 150px;
+  width: 400px;
+  border-radius: 5px;
+  resize: none;
 }
-.banner-8{
-    background-image: url('https://seliganerd.com/wp-content/uploads/2024118113123_1.jpg');
+.button-enviar {
+  width: 100px;
+  height: 40px;
+  background-color: #d21617;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: .8s;
+  font-size: 15px;
+  font-family: 'kdam thmor pro' , sans-serif;
+  margin-top: 25px;
+  border: none;
+  font-weight: bold;
+  outline: none;
 }
-.banner-9{
-    background-image: url('https://static.wikia.nocookie.net/the-batman-universe/images/a/a5/Gil_Colson_greets_Bruce_Wayne_-_The_Batman.png/revision/latest?cb=20211228043229');
+.button-enviar:hover {
+  background-color: #fff;
+  color: #000;
 }
-.banner-10{
-    background-image: url('https://i.pinimg.com/736x/ff/94/64/ff94642f529085bba1732252eda19f07.jpg');
-}
-
-footer{
-    height: 300px;
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-}
-
-span{
-    color: #fff;
-    font-family: "Kdam Thmor Pro", serif;
-}
-
-.footer-navagation{
+/* Fim styles página comentários */
+/* Início responsividade comentários */
+@media (max-width: 768px) {
+  .foto {
     display: none;
-}
-
-.footer-list {
+  }
+  #formulario {
+    margin: 5px 5px 5px 5px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
     align-items: center;
+  }
+  .footer-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
-
-@media(max-width: 768px){
-    .footer-navagation{
-        display: block;
-    }
-
-    nav{
-        display: none;
-    }
-
-    #banner{
-        background-position: 40%;
-    }
-
-    #trailer-container{
-        width: 100%;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content{
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .trailer{
-        width: 100%;
-    }
-
-    #sinopse{
-        width: 95%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .description{
-        width: 100%;
-    }
-
-    .button{
-        width: 100%;
-        margin-top: 30px;
-    }
-
-    .cards-content{
-        grid-template-columns: 1fr;
-        margin-top: 150px;
-    }
-    
-    
+/* Fim responsividade comentários */
+/* Início styles página fotos */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 10px;
+  column-gap: 10px;
+  width: 99%;
+  height: 560px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
+.cards {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+  border: 1px gray solid;
+}
+.cards:hover {
+  transform: scale(1.20);
+}
+.card-1 {
+  background-image: url('https://images7.alphacoders.com/121/1214448.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-2 {
+  background-image: url('https://filmdaily.co/wp-content/uploads/2022/03/the-batman-lede-3.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-3 {
+  background-image: url('https://epipoca.com.br/wp-content/uploads/2022/07/the-batman-charada-paul-dano1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-4 {
+  background-image: url('https://rollingstone.uol.com.br/media/uploads/the-batman-charada-paul-dano-foto-reproducao.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-5 {
+  background-image: url('https://s2.glbimg.com/zYlZbxKkPK-hKo3pi460fM0RL2w=/smart/e.glbimg.com/og/ed/f/original/2022/03/14/thebatman.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-6 {
+  background-image: url('https://www.rbsdirect.com.br/filestore/5/5/7/1/8/9/1_8273f62bcb94679/1981755_0eee186128acdaa.jpg?w=700');
+  background-position: center;
+  background-size: cover;
+}
+.card-7 {
+  background-image: url('https://images.squarespace-cdn.com/content/v1/51b3dc8ee4b051b96ceb10de/07c53b1e-7aee-477d-8d45-c16c080faa75/new-featurette-for-the-batman-offers-additional-details-on-jeffrey-wrights-jim-gordon.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-8 {
+  background-image: url('https://img.ibxk.com.br/2021/04/20/20092230715545.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+.card-9 {
+  background-image: url('https://rollingstone.uol.com.br/media/uploads/andy_serkis_em_the_batman_foto_divulgacao__warner_bros..jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-10 {
+  background-image: url('https://getyourcomicon.co.uk/wp-content/uploads/2022/02/TheBatman-Alfred-Header.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-11 {
+  background-image: url('https://www.yankodesign.com/images/design_news/2022/03/original-blueprints-of-batmobile-driven-by-bruce-wayne-released-by-the-artist/The-Batman-Batmobile-by-ASh-Thorp-4.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.card-12 {
+  background-image: url('https://preview.redd.it/vmf9bn3fn8x71.jpg?auto=webp&s=ec73eaacaf41342fe6dac66743610f941bf3898c');
+  background-position: center;
+  background-size: cover;
+}
+/* Fim styles página fotos */
+/* Início responsividade fotos */
+@media (max-width: 768px) { 
+  .galeria {
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 30px;
+    height: 100%;
+  }
+
+  .cards {
+    height: 300px;
+  }
+}
+/* Fim responsividade fotos */
